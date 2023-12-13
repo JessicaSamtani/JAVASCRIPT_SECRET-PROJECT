@@ -16,7 +16,7 @@ function randomSquare() {
   randomSquare.classList.add("nigoni");
 
   hitPosition = randomSquare.id;
-  console.log(Math.floor(Math.random() * 9));
+  console.log("The random square is: ", hitPosition);
 }
 
 squares.forEach((square) => {
@@ -31,7 +31,7 @@ squares.forEach((square) => {
 
 function moveNigoni() {
   let timerId = null;
-  timerId = setInterval(randomSquare, 500);
+  timerId = setInterval(randomSquare, 700);
 }
 function countDown() {
   currentTime--;
@@ -43,6 +43,6 @@ function countDown() {
   }
 }
 
-randomSquare();
+moveNigoni();
 
-let countDownTimerId = setInterval(countDown, 700);
+let countDownTimerId = setInterval(countDown, 1000);
